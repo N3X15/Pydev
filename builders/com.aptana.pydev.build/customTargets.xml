@@ -21,7 +21,7 @@
 	<!-- ===================================================================== -->
 	<target name="postProcessRepos">
 		<!-- clean up repos now that they've been transformed. save disk space (necessary when compiling in RAM disk) -->
-		<delete dir="${repoBaseLocation}" />
+		<!-- NO <delete dir="${repoBaseLocation}" />-->
 	</target>
 
 	<!-- ===================================================================== -->
@@ -29,7 +29,7 @@
 	<!-- ===================================================================== -->
 	<target name="postProcess">
 		<!-- clean up nestedJars. save disk space (necessary when compiling in RAM disk) -->
-		<delete dir="${buildDirectory}/nestedJars" />
+		<!-- NO <delete dir="${buildDirectory}/nestedJars" /> -->
 	</target>
 
 	<!-- ===================================================================== -->

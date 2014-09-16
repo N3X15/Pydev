@@ -40,7 +40,7 @@ public class SocketUtil {
             try {
                 for (int i = 0; i < ports; i++) {
                     ServerSocket s = new ServerSocket(0);
-                    socket.add(s);
+                    //socket.add(s); // This is causing all kinds of hell on Windows. - N3X
                     int localPort = s.getLocalPort();
                     checkValidPort(localPort);
                     portsFound.add(localPort);
