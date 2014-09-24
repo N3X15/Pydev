@@ -1,0 +1,3 @@
+[submodule "tools/eclipse-build"]
+	path = tools/eclipse-build
+	url = https://github.com/N3X15/eclipse-builder.git

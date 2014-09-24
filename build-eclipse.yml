@@ -1,0 +1,21 @@
+# BUILD CONFIGURATION FILE.
+#
+# The purpose of this is to organize the build properties into a nice,
+#  clean, and VERSIONED setup, while still permitting secret stuff (like passwords).
+#
+# Each of the files referenced in ant.properties.files will get merged into the outfile 
+#  and then fed directly to ant via -propertiesfile in Jenkins. (The buildscript can run
+#  ant, as well, but it tends to mess up Jenkins' error scanner.)
+# 
+# Refer to /properties for more information.
+#
+ant:
+  properties:
+    files:
+      # See studio3 for more information on these.
+      - "%%WORKSPACE%%/../aptana-studio3-release/properties/studio3.properties"
+      - "%%WORKSPACE%%/../aptana-studio3-release/properties/eclipse.properties"
+      - "%%WORKSPACE%%/../aptana-studio3-release/properties/p2.properties"
+    keys: {}
+    outfile: /tmp/jenkins-%%JOB_NAME%%.properties
+    secret-keys: []
